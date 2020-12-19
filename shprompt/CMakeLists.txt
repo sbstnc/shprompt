@@ -11,4 +11,4 @@ add_executable(shprompt
                ${CMAKE_SOURCE_DIR}/deps/flag/flag.c
                ${CMAKE_SOURCE_DIR}/deps/flag/flag.h)
 target_include_directories(shprompt PRIVATE ${CMAKE_SOURCE_DIR}/deps/flag ${CMAKE_SOURCE_DIR}/deps/colorize)
-target_link_libraries(shprompt libshprompt)
+target_link_libraries(shprompt libshprompt argtable)

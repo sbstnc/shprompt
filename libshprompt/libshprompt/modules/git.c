@@ -1,10 +1,34 @@
+#include <git2.h>
 #include <libchalk/chalk.h>
+#include <libsds/sds.h>
 #include <libshprompt/config.h>
 #include <libshprompt/module.h>
 #include <libshprompt/modules/git.h>
 #include <string.h>
 
 static void ahead_behind(git_repository *, size_t *, size_t *);
+
+static const char *shorthand(const git_reference *ref);
+
+static const char *oid(const git_reference *ref);
+
+static git_reference *head(git_repository *repo);
+
+static git_reference *upstream(const git_reference *ref);
+
+typedef struct git_repository_status {
+  size_t untracked;
+  size_t conflicts;
+  size_t changed;
+  size_t staged;
+  size_t deleted;
+  size_t renamed;
+} git_repository_status;
+
+static git_repository_status status(git_repository *repo);
+
+static int git_repository_status_cb(const char *path, unsigned int flags,
+                                    void *payload);
 
 module *git_module(context *ctx)
 {

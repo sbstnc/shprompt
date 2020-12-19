@@ -6,6 +6,7 @@ add_subdirectory(deps/stb)
 add_subdirectory(deps/libchalk)
 add_subdirectory(deps/libsds)
 add_subdirectory(deps/libgit2)
+add_subdirectory(deps/argtable)
 add_subdirectory(libshprompt)
 add_subdirectory(shprompt)
 
