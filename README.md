@@ -4,8 +4,7 @@ A rewrite of my personal git enabled shell prompt in plain C11.
 
 ![](assets/screenshot.png)
 
-This version aims to replicate the design of [Gondolin](https://github.com/tylerreckart/gondolin) minus the time since
-last commit info.
+This version aims to replicate the design of [Gondolin](https://github.com/tylerreckart/gondolin).
 
 ### Configuration
 
