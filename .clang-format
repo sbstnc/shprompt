@@ -1,0 +1,8 @@
+---
+BasedOnStyle: LLVM
+AllowAllParametersOfDeclarationOnNextLine: false
+BreakBeforeBraces: Linux
+IncludeBlocks: Regroup
+IndentPPDirectives: AfterHash
+BreakBeforeBinaryOperators: All
+...
